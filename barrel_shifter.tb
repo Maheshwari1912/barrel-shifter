@@ -1,0 +1,42 @@
+module barrel_shifter_tb();
+reg [7:0] data_in;
+reg [2:0] shift_amount;
+reg [3:0] shift_function;
+wire [7:0] data_out;
+barrel_shifter dut (data_in,shift_amount,shift_function,data_out);
+initial begin
+data_in=8'b10110011;
+shift_amount=3'b000;
+shift_function=4'b0000;#10;
+
+shift_function=4'b0001;
+shift_amount=3'b001;#10;
+
+shift_function=4'b0010;
+shift_amount=3'b010;#10;
+
+shift_function=4'b0011;
+shift_amount=3'b011;#10;
+
+shift_function=4'b0100;
+shift_amount=3'b100;#10;
+
+shift_function=4'b0101;
+shift_amount=3'b101;#10;
+
+shift_function=4'b0110;
+shift_amount=3'b110;#10;
+
+shift_function=4'b0001;
+shift_amount=3'b111;#10;
+
+data_in = 8'b00000001;
+shift_function=4'b0001;
+shift_amount=3'b111;#10;
+
+$finish;
+end
+initial begin
+$monitor("%t %b %d %b %b ", $time,shift_function,shift_amount, data_in, data_out);
+end
+endmodule
