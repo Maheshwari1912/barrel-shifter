@@ -29,4 +29,10 @@ This makes it an essential component in processors, digital signal processing (D
 
 **simulation results:**
 
+![image](https://github.com/user-attachments/assets/e0bfbd9e-5e7a-4251-9200-880ff5e35cca)
+
+**schematic:**
+
+![image](https://github.com/user-attachments/assets/f9c46495-6b0a-4b94-8721-3664eafa0dc3)
+
 
